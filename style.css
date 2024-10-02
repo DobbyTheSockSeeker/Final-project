@@ -1,0 +1,12 @@
+body{
+    background-color: whitesmoke;
+}
+
+h1{
+    color: black;
+}
+
+.score{
+    font-size: 30px;
+    top: 0px;
+}
