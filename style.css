@@ -1,28 +1,28 @@
-body{
+body {
     min-height: 100vh;
     min-width: 100vw;
     background-color: whitesmoke;
     color: black;
 }
 
-h1{
+h1 {
     text-align: center;
     font-weight: 700;
     color: black;
 }
 
-p{
+p {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
 }
 
-.actions{
+.actions {
     display: flex;
     justify-content: center;
 }
 
-.actions button{
+.actions button {
     padding: 8px 16px;
     font-size: 30px;
     border-radius: 10px;
@@ -30,7 +30,7 @@ p{
     color: whitesmoke;
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     justify-content: center;
     grid-gap: 16px;
@@ -38,7 +38,7 @@ p{
     grid-template-rows: repeat(2, calc(140px / 2 * 3s));
 }
 
-.card{
+.card {
     height: calc(140px / 2 * 3);
     width: 140px;
     border-radius: 10px;
@@ -48,17 +48,17 @@ p{
     transition: all 0.5s ease-out;
 }
 
-.front-image{
+.front-image {
     width: 60px;
     height: 60px;
 }
 
-.card.flipped{
+.card.flipped {
     transform: rotateY(180deg);
 }
 
 .front,
-.back{
+.back {
     backface-visibility: hidden;
     position: absolute;
     border-radius: 10px;
@@ -68,14 +68,14 @@ p{
     width: 100%;
 }
 
-.card .front{
+.card .front {
     display: flex;
     justify-content: center;
     align-items: center;
     transform: rotateY(180deg);
 }
 
-.card .back{
+.card .back {
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='80.5' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(240,6.7%,17.6%,1)'/><path d='M-10 5l20 10L30 5l20 10'  stroke-linecap='square' stroke-width='1.5' stroke='%234a4a53ff' fill='none'/><path d='M-10 25l20 10 20-10 20 10'  stroke-linecap='square' stroke-width='1.5' stroke='%23646471ff' fill='none'/><path d='M-10 45l20 10 20-10 20 10'  stroke-linecap='square' stroke-width='1.5' stroke='%239e9ea4ff' fill='none'/><path d='M-10 65l20 10 20-10 20 10'  stroke-linecap='square' stroke-width='1.5' stroke='%23ffffffff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
     background-position: center center;
     background-size: cover;
