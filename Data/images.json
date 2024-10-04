@@ -1,0 +1,38 @@
+[
+    {
+        "image": "../assets/blue-gem.png",
+        "name": "blue-gem"
+    },
+    {
+        "image": "../assets/diamond.png",
+        "name": "diamond"
+    },
+    {
+        "image": "../assets/emerald",
+        "name": "emerald"
+    },
+    {
+        "image": "..assets/orange-gem.png",
+        "name": "orange-gem"
+    },
+    {
+        "image": "..assets/purple-diamond.png",
+        "name": "purple-diamond"
+    },
+    {
+        "image": "../assets/red-diamond.png",
+        "name": "red-diamond"
+    },
+    {
+        "image": "../assets/ruby.png",
+        "name": "ruby"
+    },
+    {
+        "image": "../assets/saphire.png",
+        "name": "saphire"
+    },
+    {
+        "image": "../assets/yellow-gem.png",
+        "name": "yellow-gem"
+    }
+]
