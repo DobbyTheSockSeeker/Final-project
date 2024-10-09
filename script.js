@@ -2,9 +2,9 @@ const gridContainer = document.querySelector(".grid-container");
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
-let score = 0;
+let turns = 0;
 
-document.querySelector(".score").textContent = score;
+document.querySelector(".turns").textContent = turns;
 
 fetch("./data/cards.json")
     .then((res) => res.json())
@@ -15,20 +15,11 @@ fetch("./data/cards.json")
     })
 
 function shuffleCards() {
-    let currentIndex = cards.length,
-    randomIndex,
-    temporaryValue;
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = cards[currentIndex];
-        cards[currentIndex] = cards[randomIndex];
-        cards[randomIndex = temporaryValue];
-    }
+    cards.sort((a, b) => -0.5 + Math.random());
 }
 
 function generateCards() {
-    for(let card of cards) {
+    cards.forEach(card => {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
         cardElement.setAttribute("data-name", card.name);
@@ -39,7 +30,7 @@ function generateCards() {
             <div class="back"></div>`;
         gridContainer.appendChild(cardElement);
         cardElement.addEventListener("click", flipCard);
-    }
+    });
 }
 
 function flipCard() {
@@ -54,8 +45,8 @@ function flipCard() {
     }
 
     secondCard = this;
-    score++;
-    document.querySelector(".score").textContent = score;
+    turns++;
+    document.querySelector(".turns").textContent = turns;
     lockBoard = true;
 
     checkForMatch();
@@ -91,8 +82,8 @@ function resetBoard() {
 function restart() {
     resetBoard();
     shuffleCards();
-    score = 0;
-    document.querySelector(".score").textContent = score;
+    turns = 0;
+    document.querySelector(".turns").textContent = turns;
     gridContainer.innerHTML = "";
     generateCards();
 }
