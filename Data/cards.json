@@ -8,15 +8,15 @@
         "name": "diamond"
     },
     {
-        "image": "../assets/emerald",
+        "image": "../assets/emerald.png",
         "name": "emerald"
     },
     {
-        "image": "..assets/orange-gem.png",
+        "image": "../assets/orange-gem.png",
         "name": "orange-gem"
     },
     {
-        "image": "..assets/purple-diamond.png",
+        "image": "../assets/purple-diamond.png",
         "name": "purple-diamond"
     },
     {
