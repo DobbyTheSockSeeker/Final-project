@@ -3,6 +3,7 @@ let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let turns = 0;
+let flippedCards = 0;
 
 document.querySelector(".turns").textContent = turns;
 
@@ -55,7 +56,18 @@ function flipCard() {
 function checkForMatch() {
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
     
-    isMatch ? disableCards() : unflipCards();
+    if (isMatch == true) {
+        disableCards();
+        flippedCards += 2;
+        console.log(flippedCards);
+    }
+    else {
+        unflipCards();
+    }
+    
+    if (flippedCards >= 18) {
+        autoRestart();
+    }
 }
 
 function disableCards() {
@@ -71,6 +83,12 @@ function unflipCards(){
         secondCard.classList.remove("flipped");
         resetBoard();
     }, 1000);
+}
+
+function autoRestart(){
+    setTimeout(() => {
+        restart();
+    }, 2000);
 }
 
 function resetBoard() {
