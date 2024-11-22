@@ -1,8 +1,5 @@
 [
     {
-        "_comment": "Adding the pictures to load into the JS file"
-    },
-    {
         "image": "../assets/blue-gem.png",
         "name": "blue-gem"
     },
