@@ -4,17 +4,29 @@
 <head>
     <meta charset="utf-8">
     <title>Memory game</title>
+    <!-- Link to the external stylesheet for styling the game -->
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body class="">
+<body>
+    <!-- Main header for the memory game -->
     <h1>Memory game</h1>
+
+    <!-- Container to hold the grid of cards -->
     <div class="grid-container">
+        <!-- Cards will be dynamically generated here by the JavaScript -->
     </div>
+
+    <!-- Display the number of turns taken by the player -->
     <p>Turns: <span class="turns"></span></p>
+
+    <!-- Section for action buttons -->
     <div class="actions">
+        <!-- Button to restart the game, calls the restart function defined in the JavaScript -->
         <button onclick="restart()">Restart</button>
     </div>
+
+    <!-- Link to the external JavaScript file that controls the game logic -->
     <script src="script.js"></script>
 </body>
 
